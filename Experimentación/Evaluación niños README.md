@@ -11,7 +11,7 @@ Cada audio de los niños fue representado de 3 maneras diferentes:
 La que mejor resultó fue la última de las mencionadas, la Tarea 2. Los audios completos incluían participaciones de la maestra que intentaba orientar y ayudar a los chicos.
 Los fragmentos aislados carecían de contexto, algo que Whisper usa para mejorar sus transcripciones. Las reconstrucciones a partir de los recortes solucionaban estas cuestiones: No se contaba con las voces de las maestras pero si con el contexto necesario para obtener buenos resultados.
 
-Probamos con un total de 56 audios obteniendo, en el mejor caso, un WER promedio de … y un CER promedio de… Numeros que, teniendo en cuenta la gran dificultad de la tarea, eran alentadores.
+Probamos con un total de 56 audios obteniendo, en el mejor caso, un WER promedio de 0.21 y un CER promedio de 0.13. Numeros que, teniendo en cuenta la gran dificultad de la tarea, eran alentadores.
 
 Cabe destacar que, con el objetivo de hacer un análisis más profundo, decidimos comparar entre hipotesis y referencias bajo 2 estados. Normalizados (sin mayusculas ni puntuaciones) y Crudos (tal cual lo expulsa el modelo).
 
@@ -21,4 +21,4 @@ Todo esto fue llevado a una planilla en excel para mejorar la visualización de 
 
 En la carpeta audios_niños encontrarán todos aquellas grabaciónes que utilizamos para llegar a nuestras conclusiones. 
 
-Al ejecutar el archivo evaluacion_niños.ipynb obtendrán las transcripciones junto a sus alineaciones con la refencia y métricas correspondientes. Toda esta información se guardará en el archivo salida_prueba.xlsx 
+Al ejecutar el archivo evaluacion_niños.ipynb obtendrán las transcripciones junto a sus alineaciones con la refencia y métricas correspondientes. Toda esta información se guardará en el archivo resultados_experimentacion_niños.xlsx 

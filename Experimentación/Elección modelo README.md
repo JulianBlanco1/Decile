@@ -17,7 +17,59 @@ En la carpeta Audios_adultos encontramos las ocho grabaciones utilizadas durante
 
 Para evaluar que tan buena había sido su performance, utilizamos 2 métricas conocidas, WER (word error rate) y CER (character error rate). 
  
-# Explicar
+**WER (Word Error Rate)** mide el porcentaje de palabras en las que la predicción difiere del texto real.
+
+Considera tres tipos de errores:
+
+- **S** → sustituciones (palabras incorrectas)  
+- **D** → eliminaciones (palabras omitidas)  
+- **I** → inserciones (palabras añadidas de más)  
+- **N** → cantidad total de palabras en la referencia  
+
+### Fórmula
+
+WER = (S + D + I) / N
+
+### Interpretación
+- **0.00 = perfecto** (sin errores)  
+- **0.10 = 10% de error**  
+- Cuanto más bajo, mejor  
+
+WER es útil para evaluar frases completas o textos más largos.
+
+**CER (Character Error Rate)** mide el porcentaje de error a nivel de caracteres.  
+Sigue la misma lógica de WER, pero en lugar de palabras compara letra por letra.
+
+Es especialmente útil cuando:
+
+- los textos son muy cortos  
+- las palabras están mal segmentadas  
+- se trabaja con idiomas sin espacios (chino, japonés, etc.)
+
+### Fórmula
+
+CER = (S + D + I) / N_char
+
+donde **N_char** es el número total de caracteres en la referencia.
+
+## Ejemplo práctico
+
+Ejemplo: 
+
+- Texto 1: *hola mundo*
+
+- Texto 2: *hola mundos*
+
+Errores detectados:
+- S = 1 (mundo → mundos)  
+- D = 0  
+- I = 0  
+- N = 2 palabras  
+- N_char = 9 Caracteres
+
+**WER** = 1 / 2 = 0.50  (50%)
+
+**CER** = 1 / 9 = 0.11  (11%)
 
 La librería jiwer nos facilitó el acceso a las métricas. La función que las ejecuta recibe 2 parámetros:
 
@@ -54,4 +106,10 @@ Con todo esto en nuestras manos, pudimos recorrer el diccionario obteniendo el W
 
 ![alt text](https://i.imgur.com/2AomDHa.png)
 
-Como podemos ver los resultados fueron prometedores. Con esto decidimos quedarnos con el modelo Whisper Turbo, una combinación entre calidad en las transcripciones y buena performance en cuestiones de tiempo.
+Como podemos ver los resultados fueron alentadores y mostraron el excelente desempeño de estos modelos. 
+
+Luego de esto, se probaron nuevos modelos sugeridos por diversos profesionales. Estos fueron: ...
+
+Estos tenian un problema en común, eran extremedamente lentos y su desempeño no era lo suficientemente bueno. Con ellos obtuvimos metricas WER y CER similares a las de los modelos Whisper - Base.
+
+Gracias a toda la experimentación realizada, decidimos quedarnos con el modelo Whisper Turbo, una combinación entre calidad en las transcripciones y buena performance en cuestiones de tiempo.
