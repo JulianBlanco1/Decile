@@ -58,6 +58,8 @@ En estos explicamos con más detalle en que momento los utilizamos respectivamen
 
 Primero que nada, los audios que se desean evaluar deben encontrarse almacenados en la carpeta llamada “audios”. Al ejecutar enteramente el código se obtendrá un excel que almacenará la transcripción realizada y las métricas correspondientes
 
+IMPORTANTE: Deben eliminar el archivo instructivo.txt luego de agregar sus audios
+
 ### 1) Prerrequisitos
 - **Python** 3.10–3.12 recomendado.
 
